@@ -1,0 +1,7 @@
+package application;
+
+public interface MovimentacaoBancaria {
+    void depositar(double valor);
+    void sacar(double valor) throws SaldoInsuficienteException;
+    void transferir(ContaBancaria contaDestino, double valor) throws SaldoInsuficienteException;
+}
