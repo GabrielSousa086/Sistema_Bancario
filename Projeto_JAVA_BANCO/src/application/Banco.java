@@ -32,17 +32,17 @@ public class Banco {
                 return cliente;
             }
         }
-        return null; // Retorna null se o cliente não for encontrado
+        return null; // retorna null se o cliente não for encontrado
     }
 
     public boolean removerClientePorCPF(String cpf) {
         for (Cliente cliente : clientes) {
             if (cliente.getCpf().equals(cpf)) {
                 clientes.remove(cliente);
-                return true; // Cliente removido com sucesso
+                return true; // cliente removido com sucesso
             }
         }
-        return false; // Cliente não encontrado
+        return false; // cliente não encontrado
     }
 }
 
