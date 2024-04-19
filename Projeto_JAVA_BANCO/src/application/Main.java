@@ -7,13 +7,13 @@ public class Main {
         Banco banco = new Banco();
         Scanner scanner = new Scanner(System.in);
 
-        // Loop para permitir que o usuário crie vários clientes
+        // loop para permitir que o usuário crie vários clientes
         while (true) {
             System.out.println("Deseja adicionar um novo cliente? (s/n)");
             String resposta = scanner.nextLine().trim().toLowerCase();
             
             if (!resposta.equals("s")) {
-                break; // Sai do loop se a resposta não for 's'
+                break; // sai do loop se a resposta não for 's'
             }
 
             System.out.println("Digite o nome do cliente:");
@@ -22,8 +22,8 @@ public class Main {
             System.out.println("Digite o CPF do cliente:");
             String cpf = scanner.nextLine();
 
-            // Crie a conta bancária aqui (conta corrente, poupança, etc.)
-            // Você pode solicitar informações adicionais, como saldo inicial, dependendo do tipo de conta.
+            // crie a conta bancária aqui (conta corrente, poupança, etc.)
+            // você pode solicitar informações adicionais, como saldo inicial, dependendo do tipo de conta.
             System.out.println("Escolha o tipo de conta (1 - Conta Corrente, 2 - Conta Poupança):");
             int tipoConta = Integer.parseInt(scanner.nextLine());
 
@@ -45,16 +45,16 @@ public class Main {
                 conta = new ContaCorrente("", 0, 0);
             }
 
-            // Crie o cliente com as informações fornecidas
+            // crie o cliente com as informações fornecidas
             Cliente cliente = new Cliente(nome, cpf, conta);
 
-            // Adicione o cliente ao banco
+            // adicione o cliente ao banco
             banco.adicionarCliente(cliente);
         }
 
         scanner.close();
 
-        // Exemplo de utilização do banco após a criação dos clientes:
+        // exemplo de utilização do banco após a criação dos clientes:
         System.out.println("Clientes no banco:");
         for (Cliente cliente : banco.getClientes()) {
             System.out.println(cliente);
